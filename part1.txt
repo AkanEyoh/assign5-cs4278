@@ -1,0 +1,202 @@
+Project Repo: https://github.com/AkanEyoh/assign5-cs4287
+
+Interviewed:
+- 1st response = current Commons RA
+- 2nd response = former Commons RA
+- 3rd response = current main campus RA
+
+# The RA Helper
+
+My initial idea was to make some sort of texting application to help RAs (resident
+advisors) better communicate with the residents they're responsible for. I myself have
+never been an RA at Vanderbilt, but I have many friends that are. I can imagine that
+they run into many issues trying to communicate with 30+ students regularly 
+throughout a semester. So, that was the main driving force behind this idea: to create
+software that would help RAs and residents communicate more effectively. 
+
+I have a few goals for the application: a way for residents to notify their RAs of
+an emergency quickly, a way for RAs to send their residents information regarding
+house/floor events, and a way for residents to get quick information regarding helpful
+resources on campus like the Career Center and Writing Center.
+
+Overall, I think some of these goals are a bit challenging but definitely all within
+reach of being accomplished. With the answer to my interview questions, I hope to get
+a little more insight as to what challenges RAs face and how software could overcome
+some of those challenges.
+
+# Questions:
+
+1. When and why did you first decide to become an RA?
+2. What types of responsibilities do/did you have as an RA that other
+   Vanderbilt employees don't have?
+3. How do/did you get in contact with your residents?
+4. Do/did you find it easy to get in contact with your residents? 
+5. What resources on campus would you like your residents to know about and 
+   have easy access to?
+6. Do/did you find it easy to notify your residents of upcoming house events,
+   floor meetings, etc.?
+7. Is/was there any aspect of being an RA that you found unexpected? (i.e.
+   something you had to do as an RA that you didn't expect when you first signed up?)
+8. Have you ever had to handle an emergency situation with one of your residents?
+   If so, how did you handle it? 
+9. What aspects about being an RA do/did you enjoy?
+10. In your opinion, what's the hardest part about being an RA?
+
+# Answers:
+
+## Question 1: 
+"I decided to become a RA in the middle of my freshman year because I wanted to 
+be a mentor to incoming first-year students and help get them connected on campus. 
+I also liked the opportunity to have my housing covered."
+
+"My freshman year RAs took me and some other international students out for bbq 
+on my second night in America and I immediately knew that this was something I was 
+interested in: a leadership role where the main focus was on personal relationships."
+
+"I knew I wanted to be an RA after connecting so well my RA from Freshman year. She 
+made my Freshman year so much more fulfilling than I thought it would be and made 
+my transition into Vanderbilt feel like I was going to a second home."
+
+...
+
+## Question 2:
+"I am responsible for getting to know around 45 residents on my floor, and while I 
+am not expected to be fully engaged 24/7, my responsibilities range all over the 
+place as anytime I am in the building I may have a conversation with a resident 
+or respond to a request or question from a resident. At any moment's notice, I may 
+be helping a resident."
+
+"Personal crisis care. RAs are first responders to many tragic events. We're often 
+the first people on the scene with overdoses or suicide attempts, arriving even before 
+the police." 
+
+"I'm responsible for lots of logistical things like doing regular room checks to 
+make sure that students are still living in the domrs they're assigned to. In a general 
+sense, my responsiblities vary case by case though." 
+
+...
+
+## Question 3:
+"I use a GroupMe to communicate to residents about house events like our weekly 
+Sutherland Social. I also will give them invitations by hand for invite-only events 
+like our Sutherland Cafecitos. I will also sit in the common area and make an effort 
+to greet and chat with those who come by. If I have specific requests, I might text 
+residents individually."
+
+"I saw them in person quite frequently because we would all hang out in the common 
+room together. I would text them individually, but we also had a groupme for the 
+whole floor."
+
+"Typically I just use Groupme to send a quick message to all of the residents on my
+floor. But if I need to get in contact with a specific resident, I usually send him
+or her a quick text."
+
+...
+
+## Question 4:
+"Sometimes. Some residents I rarely see around so it is hard to get to know them. 
+Sometimes residents are not responsive to texts. Most residents do not say anything 
+in the GroupMe and some probably do not check the GroupMe. I am usually able to reach 
+most residents by individual text though."
+
+"Yes, and they would also initiate getting in contact with me."
+
+"Sometimes Groupme can be glitchy, so not all the time, but for the most part yes."
+
+...
+
+## Question 5:
+"Hank Ingram front desk, Tech Hub, Center of Student Wellbeing, Student Health Center, 
+UCC, Project Safe, IICC, and possibly more I'm forgetting."
+
+"The wellness center. It's a great resource for anyone and shouldn't be seen as a 
+place to go to only when you're going through stress."
+
+"Student Health Center, Career Center, Writing Center, University Counciling Center."
+
+...
+
+## Question 6:
+"It's easy to post the message in the GroupMe and write it on the whiteboard in the 
+common area, but I don't know who is getting what messages and who's actually reading 
+the messages. I don't know if people plan on coming to events but when the event happens 
+they don't feel like going anymore, or if people plan on coming to events but when the 
+time comes they forget it's happening, or if people just don't plan on coming to events."
+
+"Yes for the most part."
+
+"Yes, I'm pretty sure my most of residents at least know about every floor event 
+when I post about them in the Groupme, but Groupme doesn't have read receipts so it's 
+hard to tell who's seen the post and who hasn't."
+
+...
+
+## Question 7:
+"There are certain responsibilities like preparing door decs and bulletin boards that 
+I didn't expect. Also, there are many small miscellaneous things that pop up that I 
+don't plan for, like requests for residents for this and that."
+
+"Yes. Most of my work had very little to do with interacting with residents which came 
+as quite a surprise to me. There's a great amount of admin we had to do. In fact, 
+admin and event planning is such a large part of the job that I know many RAs who were 
+greatly disliked or even hated by their residents yet were held in high regard and often 
+promoted to the HR position because they were good at administrative duties and other 
+roles that didn't involve personal interaction. Resed is quite out of touch with what 
+residents actually want in an RA."
+
+"I was a bit suprised to see how difficult it is to create community on my floor. We
+have things like events and meetings where I get to see some of my floor, but I've found
+that it's pretty hard to get everyone together even once in a semester."
+
+...
+
+## Question 8:
+"Yes, one of my residents was passed out, so I worked through the appropriate chain 
+of command, contacting the RA on duty and they contacted the AC on duty, and we ended 
+up contacting VUPD for a medical transport."
+
+"Yes. I called to inform the Area Coordinator and also called the police. That would 
+be my general approach to the handful of emergencies I dealt with."
+
+"Yes, I called VUPD and the Area Coordinator almost immediately."
+
+...
+
+## Question 9:
+"Getting to know my residents, the different things they're involved in on campus that 
+I otherwise wouldn't know about, the different stories they have, their excitement and 
+energy as first-years that keeps me going, seeing their growth over the year, working 
+with my RA staff and laughing and spending time with them, better understanding event 
+planning & getting to go off-campus to buy food for events. Being inspired by residents."
+
+"I loved hanging out with my residents, especially those who didn't necessarily feel 
+like they were a part of the floor community. I made some great relationships with them 
+and feel like I made a difference in their first year experience."
+
+"Even if I don't get to see my residents all the time, I love almost every interaction
+I have with them. All of them are so unique and bring something different to Vanderbilt.
+And if I didn't sign up to be an RA, I don't think I ever would've met some of the great
+people I have."
+
+...
+
+## Question 10:
+"Feeling the burden of so many residents & not being able to connect with them as 
+well as you'd like. Every time one of them doesn't say hi, or doesn't say hi 
+enthusiastically, I feel too sensitive about it. Seeing the attendance of the weekly 
+Sutherland Socials dwindle as people get more involved with their extracurricular 
+involvements. Not being able to come home to upperclassmen friends. There are a lot 
+of rewarding moments to being a RA, but sometimes those rewarding moments are few 
+and far between."
+
+"I felt that a lot of the work we did had no impact on the first-year experience and 
+was therefore pointless. Logging meaningful conversations, creating bulletin boards 
+and other similar activities felt like an unnecessary burden."
+
+"It's really hard to know how my residents are really doing especially when it comes
+to issues like mental health. As an RA, I feel like it's my responsibility to be there
+for my residents when they struggle with something like that, but with the constant
+busyness of Vanderbilt, it's really hard to find time to sit down and see how 
+everyone is doing." 
+
+...
