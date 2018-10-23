@@ -513,7 +513,7 @@
       (nil? residents-list) [[](str "There are no residents in " dorm ".")]
       (empty? residents-list) [[](str "There are no residents in " dorm ".")]
       :else [actions-list
-              (str "You have sent an meeting reminder to " dorm ".")])))
+              (str "You have sent a meeting reminder to " dorm ".")])))
 
 ;;;;;;;;;; Assignment 5 functionality end ;;;;;;;;;;
 
