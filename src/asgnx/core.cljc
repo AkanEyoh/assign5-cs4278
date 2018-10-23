@@ -93,7 +93,7 @@
 ;; complete specification.
 ;;
 (defn homepage [_]
-  (str "https://brightspace.vanderbilt.edu/d2l/home/85892"))
+  (str cs4278-brightspace))
 
 ;; Asgn 1.
 ;;
@@ -448,6 +448,75 @@
         new-state (experts-register experts topic user-id {})]
     [new-state (str user-id " is now an expert on " topic ".")]))
 
+;;;;;;;;;; Assignment 5 functionality added ;;;;;;;;;;
+
+;; A common resource RAs wanted their residents to know about: VUPD's number
+(def VUPD "(615) 322-2745")
+(defn VUPDnum [_]
+  (str VUPD))
+
+;; A common resource RAs wanted their residents to know about: the UCC
+;; UCC stands for the University Counseling Center, a resource for students that
+;; struggle with mental health or other psychological problems
+(def UCC "https://www.vanderbilt.edu/ucc/")
+(defn UCCsite [_]
+  (str UCC))
+
+;; A common resource RAs wanted their residents to know about: the IT Help Desk
+(def IThelp "https://it.vanderbilt.edu/techhub/")
+(defn ITsite [_]
+  (str IThelp))
+
+;; A common resource RAs wanted their residents to know about: the Center for Student Wellbeing
+(def CSW "https://www.vanderbilt.edu/healthydores/")
+(defn CSWsite [_]
+  (str CSW))
+
+;; Registers an resident advisor (RA) with his or her associated dorm on campus.
+;; Similar to experts-register.
+(defn advisor-register [state dorm id info]
+  [(action-insert [dorm :advisor id] info)])
+
+;; Adds an advisor to the specified dorm
+(defn add-advisor [advisors {:keys [args user-id]}]
+  (let [
+        dorm (first args)
+        new-state (advisor-register advisors dorm user-id {})]
+    [new-state (str user-id " is now an RA at " dorm ".")]))
+
+;; Registers a student (resident) with his or her associated dorm on campus.
+;; Similar to experts-register.
+(defn resident-register [state dorm id info]
+  [(action-insert [dorm :residents id] info)])
+
+;; Adds a resident to the specified dorm
+(defn add-resident [resident {:keys [args user-id]}]
+  (let [
+        dorm (first args)
+        new-state (resident-register resident dorm user-id {})]
+    [new-state (str user-id " is now a resident of " dorm ".")]))
+
+;; Enables RAs to send information about house/floor meetings to residents
+(defn send-meeting-reminder [dorm-state {:keys [args user-id]}]
+  (let [
+        residents-list (first (keys (get dorm-state :advisor)))
+        advisor (first (keys (get dorm-state :advisor)))
+        dorm (first args)
+        reminder-msg (string/join " " (rest args))
+        meeting-reminder (str dorm " reminder: " reminder-msg)
+        message-action (action-send-msgs residents-list meeting-reminder)
+        insert-action(action-inserts [:conversations] residents-list user-id)
+        actions-list (concat message-action insert-action)]
+    (cond
+      (not (= advisor user-id)) [[] (str "You are not the RA for " dorm ".")]
+      (empty? reminder-msg) [[](str "Your reminder was empty. Please try again.")]
+      (nil? residents-list) [[](str "There are no residents in " dorm ".")]
+      (empty? residents-list) [[](str "There are no residents in " dorm ".")]
+      :else [actions-list
+              (str "You have sent an meeting reminder to " dorm ".")])))
+
+;;;;;;;;;; Assignment 5 functionality end ;;;;;;;;;;
+
 ;; Don't edit!
 (defn stateless [f]
   (fn [_ & args]
@@ -457,7 +526,17 @@
 (def routes {"default"  (stateless (fn [& args] "Unknown command."))
              "welcome"  (stateless welcome)
              "homepage" (stateless homepage)
-             "office"   (stateless office-hours)})
+             "office"   (stateless office-hours)
+             "VUPD"     (stateless VUPDnum)
+             "UCC"      (stateless UCCsite)
+             "IThelp"   (stateless ITsite)
+             "CSW"      (stateless CSWsite)
+             "ask"      ask-experts
+             "expert"   add-expert
+             "answer"   answer-question
+             "advisor"  add-advisor
+             "resident" add-resident
+             "reminder"  send-meeting-reminder})
 ;; Asgn 3.
 ;;
 ;; @Todo: Add mappings of the cmds "expert", "ask", and "answer" to
@@ -472,18 +551,29 @@
   (let [[topic]  (:args pmsg)]
     (list! state-mgr [:expert topic])))
 
-
 ;; Don't edit!
 (defn conversations-for-user-query [state-mgr pmsg]
   (let [user-id (:user-id pmsg)]
     (get! state-mgr [:conversations user-id])))
 
+;; Query for advisors
+(defn advisor-query [state-mgr pmsg]
+  (let [[dorm]  (:args pmsg)]
+    (list! state-mgr [:advisors dorm])))
+
+;; Query for residents
+(defn resident-query [state-mgr pmsg]
+  (let [[dorm]  (:args pmsg)]
+    (list! state-mgr [:instructors dorm])))
 
 ;; Don't edit!
 (def queries
   {"expert" experts-on-topic-query
    "ask"    experts-on-topic-query
-   "answer" conversations-for-user-query})
+   "answer" conversations-for-user-query
+   "advisor"  advisor-query
+   "resident" resident-query
+   "reminder" resident-query})
 
 
 ;; Don't edit!

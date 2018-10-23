@@ -32,7 +32,12 @@
 ;;
 ;; See the tests in asgnx.kvstore-test for a complete spec.
 ;;
-(defn state-put [m ks v])
+(defn state-put [m ks v]
+ (cond
+    (nil? ks) {nil nil}
+    (= 1 (count ks)) (assoc m (first ks) v)
+    (empty? ks) {}
+    :else (assoc m (first ks) (state-put (get m (first ks)) (rest ks) v))))
 
 ;; Asgn 2
 ;;
@@ -49,7 +54,13 @@
 ;;
 ;; See the tests in asgnx.kvstore-test for a complete spec.
 ;;
-(defn state-remove [m ks])
+(defn state-remove [m ks]
+  (if (or (= 1 (count ks)) (= ks nil))
+    (dissoc m (first ks))
+    (let [val (state-remove (get m (first ks)) (rest ks))] 
+      (if (empty? val)
+        (dissoc m (first ks))
+        (assoc m (first ks) val)))))
 
 ;; Asgn 2
 ;;
@@ -70,7 +81,10 @@
 ;;
 ;; See the tests in asgnx.kvstore-test for a complete spec.
 ;;
-(defn state-get [& args]) ;; Change the signature!
+(defn state-get [m ks]
+  (if (or (= 1 (count ks)) (= ks nil))
+    (get m (first ks))
+    (state-get (get m (first ks)) (rest ks))))
 
 
 ;; Asgn 2
@@ -88,7 +102,10 @@
 ;;
 ;; See the tests in asgnx.kvstore-test for a complete spec.
 ;;
-(defn state-keys [m ks])
+(defn state-keys [m ks]
+  (if (empty? ks)
+    (keys m)
+    (keys (state-get m ks))))
 
 
 ;; An in-memory store that mimics the side-effect based stores
